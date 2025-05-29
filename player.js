@@ -10,7 +10,7 @@ export class Player {
         this.image = document.getElementById('player');
     }
     update(){
-        this.x++;
+        // this.x++;
     }
 
     // Telling draw(), who the subject of their esteemed services are

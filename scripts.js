@@ -1,4 +1,5 @@
 import { Player } from './player.js'
+import { InputHandler } from './input.js';
 
 window.addEventListener('load', function() {
     const canvas = document.getElementById('main');
@@ -11,7 +12,8 @@ window.addEventListener('load', function() {
         constructor(width, height){
             this.width = width;
             this.height = height;
-            this.player = new Player(this) // this means game object...player class expects game as an arg
+            this.player = new Player(this); // this means game object...player class expects game as an arg
+            this.input = new InputHandler();
         }
         update(){
             this.player.update();
