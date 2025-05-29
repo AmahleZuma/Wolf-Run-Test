@@ -5,3 +5,5 @@
 2. Web Technologies are great for turn based games (quizzes, tests, spot the difference, kahoot), but not so much for frame by frame demanding games. That's where Unity/Unreal and Godot come in
 3. How to write basic OOP
 4. How to build while having fun
+
+![image](https://github.com/user-attachments/assets/742dcbcb-fb53-48d1-ade8-872046210462)
