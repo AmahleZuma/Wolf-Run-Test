@@ -1,3 +1,5 @@
+import { Player } from './player.js'
+
 window.addEventListener('load', function() {
     const canvas = document.getElementById('main');
     const ctx = canvas.getContext('2d'); // Tells the canvas it will be doing 2D...context duh
@@ -9,12 +11,31 @@ window.addEventListener('load', function() {
         constructor(width, height){
             this.width = width;
             this.height = height;
+            this.player = new Player(this) // this means game object...player class expects game as an arg
         }
         update(){
-
+            this.player.update();
         }
-        draw(){
-            
+
+        // This will call the draw function in Player.js and draw the player
+        // I will be able to edit the player in player.js
+        draw(context){
+            this.player.draw(context)
         }
     }
+
+    // Instance of Game called game
+    const game = new Game(canvas.width, canvas.height)
+    console.log(game)
+
+    // Creating an animation loop
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        game.update()
+        game.draw(ctx);
+        requestAnimationFrame(animate)
+    }
+    animate()
 });
+
+// Scripts.js is basically just a container that holds all the other modules
