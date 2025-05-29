@@ -16,7 +16,7 @@ window.addEventListener('load', function() {
             this.input = new InputHandler();
         }
         update(){
-            this.player.update();
+            this.player.update(this.input.keys);
         }
 
         // This will call the draw function in Player.js and draw the player
